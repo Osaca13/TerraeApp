@@ -1,0 +1,43 @@
+﻿@model TerraeApp.Models.Oferta.OfertaIndexModel
+
+
+    <div id=" Ofertas">
+        <h3 style="text-align:center">Ofertas de empleo</h3>
+        <div id ="divOfertas"> 
+            <table class="table table-condensed" id="tableOfertas">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var oferta in Model.GetOfertaIndexModel)
+                    {
+                    
+                    <tr>
+                        <td class="" style="text-align:left"><span class="glyphicon glyphicon-asterisk"></span>@oferta.NombreEmpresa </td>
+                        <td class=""><span class="glyphicon glyphicon-calendar"></span> @oferta.FechaInicio</td>
+                        <td class=""><span class="glyphicon glyphicon-map-marker"></span>@oferta.Provincia</td>
+                        <td class=""><span class="glyphicon glyphicon-stats"></span>@oferta.NumeroCandidatos</td>
+                    </tr>
+                   
+
+
+                    }
+                    
+                
+                </tbody>
+                
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+
+       

@@ -1,0 +1,22 @@
+﻿@model TerraeApp.Models.Members.LoginViewModel
+
+    <div class="panel-heading">
+        <h1>Comprobacion de datos</h1>
+        <div class="row">
+            <div class="col-xs-3 col-md-4 col-lg-4 left">
+                <a href="#" class="active" id="register-form-link"></a>
+            </div>
+            <div class="row panel-body">
+                <output class="warning">@Model.NombreUsuario</output>
+            </div>
+            <div class="row panel-body">
+                <output class="warning">@Model.Contraseña</output>
+            </div>
+            @*<div class="row panel-body">
+                <label>Confirmar contraseña:</label>
+                <output class="warning">@Model.ConfirmarContraseña</output>
+            </div>*@
+
+        </div>
+        <hr>
+    </div>

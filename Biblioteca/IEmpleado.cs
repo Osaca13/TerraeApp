@@ -9,7 +9,7 @@ namespace Biblioteca
     {
         IEnumerable<Empleado> GetAll();
         Empleado GetById(int id);
-        void Add(Empleado nuevoEmpleado);
+        int Add(Empleado nuevoEmpleado);
         void Delete(Empleado eliminarEmpleado);
         void Update(Empleado actualizarEmpleado);
         string GetNombre(int id);

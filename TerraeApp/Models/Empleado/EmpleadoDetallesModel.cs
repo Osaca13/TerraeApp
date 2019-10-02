@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.Modelo;
+using System;
 using System.Collections.ObjectModel;
 
 
@@ -27,5 +28,6 @@ namespace TerraeApp.Models.Empleado
         public string NumeroTelefono { get => numeroTelefono; set => numeroTelefono = value; }
         public string Carnet { get => carnet; set => carnet = value; }
         public ObservableCollection<Biblioteca.Modelo.Oferta> Ofertas { get => ofertas; set => ofertas = value; }
+        public ExperienciaLaboral ExperienciaLaboral { get; set; }
     }
 }

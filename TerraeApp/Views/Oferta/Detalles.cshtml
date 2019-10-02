@@ -1,7 +1,45 @@
 ﻿@model TerraeApp.Models.Oferta.OfertaDetallesModel
 
-<div class="">
-    <div>
 
+<div class="container-fluid">
+    <div class="page-header clearfix">
+        <img src="~/images/farm3.jpg" class="center-block img-responsive" />
+        <h1 class="text-center">Detalles de la Oferta:</h1>
+        
     </div>
+
+
 </div>
+
+
+
+<div class="jumbotron">
+
+    <div class="row container-fluid">
+        <dl>
+            <p><b>Titulo:&nbsp;</b> @Model.Titulo</p>
+
+        </dl>
+        <dl>
+            <p><b>Empresa:&nbsp;</b>@Model.NombreEmpresa</p>
+
+        </dl>
+        <dl>
+            <p class="text-justify"><b>Descripción:&nbsp;</b>@Model.Descripcion</p>
+
+        </dl>
+        <dl>
+            <p><b>Fecha de Publicación:&nbsp;</b>@Model.FechaPublicacion</p>
+
+        </dl>
+        <dl>
+            <p><b>Provincia:&nbsp;</b>@Model.Provincia</p>
+
+        </dl>
+       
+    </div>
+
+    
+</div>
+   
+

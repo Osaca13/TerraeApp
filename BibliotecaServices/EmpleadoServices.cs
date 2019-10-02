@@ -5,6 +5,7 @@ using System.Text;
 using Biblioteca;
 using Biblioteca.Modelo;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace BibliotecaServices
 {
@@ -16,14 +17,24 @@ namespace BibliotecaServices
             _context = context;
         }
 
-        public void Add(Empleado nuevoEmpleado)
+        public int Add(Empleado nuevoEmpleado)
         {
-            _context.Add(nuevoEmpleado);
+           var nuevo0 = _context.Add(nuevoEmpleado);
+
+            if (nuevo0.State == EntityState.Added)
+            {
+                _context.SaveChanges();
+                return 1;
+            }else
+            {
+                return 0;
+            }
         }
 
         public void Delete(Empleado eliminarEmpleado)
         {
             _context.Remove(eliminarEmpleado);
+            _context.SaveChanges();
         }
 
         public IEnumerable<Empleado> GetAll()
@@ -97,6 +108,7 @@ namespace BibliotecaServices
         public void Update(Empleado actualizarEmpleado)
         {
             _context.Update(actualizarEmpleado);
+            _context.SaveChanges();
         }
 
        

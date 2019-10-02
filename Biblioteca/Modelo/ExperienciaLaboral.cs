@@ -21,9 +21,9 @@ namespace Biblioteca.Modelo
     public class EspecialidadPath
     {
         private int id;
-        private string path;
+        private string perfil;
 
         public int Id { get => id; set => id = value; }
-        public string Path { get => path; set => path = value; }
+        public string Path { get => perfil; set => perfil = value; }
     }
 }

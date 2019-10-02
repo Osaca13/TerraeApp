@@ -43,9 +43,9 @@ namespace TerraeApp.Controllers
 
         }
 
-        public IActionResult Detalles()
+        public IActionResult Detalles(int id)
         {
-            int id = 1;
+            
             var oferta = _oferta.GetById(id);
 
             var modelo = new OfertaDetallesModel

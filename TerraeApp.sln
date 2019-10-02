@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerraeApp", "TerraeApp\Terr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{28309297-4B1F-408D-A9B3-77AA79CDE3BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaServices", "BibliotecaServices\BibliotecaServices.csproj", "{D92C9675-0398-40AA-AA49-600B44F5BDAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliotecaServices", "BibliotecaServices\BibliotecaServices.csproj", "{D92C9675-0398-40AA-AA49-600B44F5BDAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTerraeApp", "UnitTestTerraeApp\UnitTestTerraeApp.csproj", "{99E28B5F-C280-47E6-B245-900BA36953CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D92C9675-0398-40AA-AA49-600B44F5BDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D92C9675-0398-40AA-AA49-600B44F5BDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D92C9675-0398-40AA-AA49-600B44F5BDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E28B5F-C280-47E6-B245-900BA36953CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E28B5F-C280-47E6-B245-900BA36953CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E28B5F-C280-47E6-B245-900BA36953CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E28B5F-C280-47E6-B245-900BA36953CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

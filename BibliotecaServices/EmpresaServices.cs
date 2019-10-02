@@ -23,7 +23,7 @@ namespace BibliotecaServices
 
         public void Delete(Empresa eliminarEmpresa)
         {
-            
+            _context.Remove(eliminarEmpresa);
         }
 
         public IEnumerable<Empresa> GetAll()

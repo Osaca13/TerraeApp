@@ -17,11 +17,13 @@ namespace Biblioteca.Modelo
         public string Identidad { get => identidad; set => identidad = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public string Provincia { get => provincia; set => provincia = value; }
-        public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
+        
         public string NumeroTelefono { get => numeroTelefono; set => numeroTelefono = value; }
-        public virtual ExperienciaLaboral ExperienciaLaboral { get => experienciaLaboral; set => experienciaLaboral = value; }
-        public virtual Carnet Carnet { get => carnet; set => carnet = value; }
-        public virtual ObservableCollection<Oferta> Oferta { get => oferta; set => oferta = value; }
+        public ExperienciaLaboral ExperienciaLaboral { get => experienciaLaboral; set => experienciaLaboral = value; }
+        public Carnet Carnet { get => carnet; set => carnet = value; }
+        public ObservableCollection<Oferta> Oferta { get => oferta; set => oferta = value; }
+        public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
+        
 
         [Required]
         private string nombre;

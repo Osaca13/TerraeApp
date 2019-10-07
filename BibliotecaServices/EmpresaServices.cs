@@ -9,7 +9,7 @@ namespace BibliotecaServices
 {
     public class EmpresaServices : IEmpresa
     {
-        private BibliotecaContext _context;
+        private readonly BibliotecaContext _context;
 
         public EmpresaServices(BibliotecaContext context)
         {

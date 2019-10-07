@@ -31,6 +31,7 @@ namespace TerraeApp.Controllers
         {
             ViewBag.Title = "Login page";
             this.ViewData["ReturnUrl"] = returnUrl;
+            
             return View();
         }
           
@@ -38,10 +39,7 @@ namespace TerraeApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel login)
         {
-            var valores = ModelState.Values;
-
-            var noseque = ModelState.ValidationState;
-
+            
             if (!ModelState.IsValid)
             {
                 return View("../Account/Comprobacion", login);
@@ -61,7 +59,7 @@ namespace TerraeApp.Controllers
                 };
 
                 var result = await _signInManager.PasswordSignInAsync(user, login.Contraseña, login.RememberMe, false);
-                
+                var usuarioLogueado = HttpContext.User.Identity.Name;
 
                 if (result.Succeeded)
                 {  

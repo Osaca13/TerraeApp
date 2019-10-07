@@ -16,7 +16,7 @@ namespace TerraeApp.Controllers
 {
     public class EmpleadoController : Controller
     {
-        private BibliotecaContext _context;
+        private readonly BibliotecaContext _context;
         private IEmpleado _empleado;
         public EmpleadoController(IEmpleado empleado, BibliotecaContext context)
         {
@@ -26,9 +26,9 @@ namespace TerraeApp.Controllers
 
         public IActionResult Index()
         {
-            int id = 1;
             
-            var empleado = _empleado.GetById(id);
+            
+            var empleado = _empleado.GetById(1);
 
             var empleadoCV = new EmpleadoDetallesModel
             {
@@ -81,8 +81,8 @@ namespace TerraeApp.Controllers
                 ModelState.AddModelError("", "Error en Login");
 
             }
-            
-            return View();
+
+            return RedirectToAction("Index");
         }
     }
 }

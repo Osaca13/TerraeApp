@@ -52,17 +52,17 @@ namespace TerraeApp.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Curriculum", "Empleado");
                 }
                 else
                 {
-                    //foreach (var error in result.Errors)
-                    //{
-                    //    ModelState.AddModelError("", error.Description);
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
 
-                    //}
+                    }
 
-                    return View("Comprobacion", register);
+                    return View(register);
                        
                 }
             }

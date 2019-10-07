@@ -29,12 +29,12 @@
                                 <div class="form-group">
                                     <input asp-for="NombreUsuario" type="text" name="nombreusuario" id="nombreusuario" tabindex="1" class="form-control" placeholder="Usuario"/>
 
-                                    <span asp-validation-for="NombreUsuario"></span>
+                                    <span asp-for="NombreUsuario"></span>
                                 </div>
                                 <div class="form-group">
                                     <input asp-for="Contraseña" type="password" name="contraseña" id="contraseña" tabindex="2" class="form-control" placeholder="Contraseña" required="required" runat="server" />
 
-                                    <span asp-validation-for="Contraseña"></span>
+                                    <span asp-for="Contraseña"></span>
                                 </div>
                                 @*<div class="form-group">
                                     <input asp-for="ConfirmarContraseña" type="password" name="confirmpassword" id="confirmpassword" tabindex="3" class="form-control" placeholder="Confirmar Contraseña" required="required" runat="server">

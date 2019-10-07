@@ -11,7 +11,7 @@ namespace TerraeApp.Factory
 {
     public static class FactoryConfig
     {
-        public static IContainer _container() 
+        public static IContainer Container() 
         {
             var builder = new ContainerBuilder();
 

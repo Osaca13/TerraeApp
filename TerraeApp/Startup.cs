@@ -1,6 +1,6 @@
 ﻿using Biblioteca;
 using BibliotecaServices;
-using System;
+using System.Web;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -46,6 +46,7 @@ namespace TerraeApp
             services.AddIdentity<AplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<BibliotecaContext>()
                 .AddDefaultTokenProviders();
+            //services.AddHttpContextAccesor();
 
             services.Configure<IdentityOptions>(
                 options =>

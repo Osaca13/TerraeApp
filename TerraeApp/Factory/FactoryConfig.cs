@@ -22,10 +22,7 @@ namespace TerraeApp.Factory
             builder.RegisterType<OfertaServices>().As<IOferta>();
             builder.RegisterType<ExperienciaLaboralServices>().As<IExperienciaLaboral>();
 
-
-
             return builder.Build();
-
         }
 
         private static IServiceCollection GetServices(IServiceCollection serviceCollection) 

@@ -8,6 +8,7 @@ namespace Biblioteca.Modelo
     public class AplicationUser: IdentityUser
     {
         [Required]
+        
         public string NombreUsuario { get; set; }
 
         [Required]

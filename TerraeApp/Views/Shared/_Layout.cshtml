@@ -9,15 +9,18 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/mistyle1.css" />
-        <link rel="stylesheet" href="~/css/register.css"/>
+        <link rel="stylesheet" href="~/css/register.css" />
+       
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        
+        <link rel="stylesheet" href="~/css/bootstrap-lumen.css" asp-append-version="true" />
+
     </environment>
+   
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -28,9 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">TerraeJob</a>
             </div>
             <div class="navbar-collapse collapse">
@@ -38,8 +39,12 @@
                     <li><a asp-area="" asp-controller="Oferta" asp-action="Index">Oferta</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="MembersHome" asp-action="Login">Login</a></li>
+                    <li><a asp-area="" asp-controller="MembersHome" asp-action="Login">Login</a></li>                 
                     
+                </ul>
+                <ul class="nav navbar-right navbar-expand-lg">
+                    
+                    <li><a class="">Odalys</a> </li>
                 </ul>
             </div>
             

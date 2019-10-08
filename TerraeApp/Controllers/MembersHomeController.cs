@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using TerraeApp.Models.Members;
 using System.Web;
 using Microsoft.Extensions.Logging;
+using TerraeApp.Models.Register;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,34 +16,45 @@ namespace TerraeApp.Controllers
     public class MembersHomeController : Controller
     {
         private string Identidad;
-        private readonly ILogger<AplicationUser> _logger;
+        //private readonly ILogger<AplicationUser> _logger;
         private readonly UserManager<AplicationUser> _userManager;
         private readonly SignInManager<AplicationUser> _signInManager;
-        public MembersHomeController(UserManager<AplicationUser> userManager, SignInManager<AplicationUser> signInManager, ILogger<AplicationUser> logger)
+        public MembersHomeController(UserManager<AplicationUser> userManager, SignInManager<AplicationUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _logger = logger;
+           // _logger = logger;
+          //  var usuarioLogueado = HttpContext.User.Identity.Name;
 
         }
         // GET: /<controller>/
         [HttpGet]
-        public IActionResult Login(string returnUrl = null)
+        
+        public IActionResult Login(string returnUrl)
         {
-            ViewBag.Title = "Login page";
-            this.ViewData["ReturnUrl"] = returnUrl;
+           // if (_signInManager.Context.User != null) 
+           // {
+           //  _signInManager.SignOutAsync();
+           // }
+           
+           // ViewBag.Title = "Login page";
+           ViewBag.ReturnUrl = returnUrl;
             
             return View();
         }
-          
+
 
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel login)
         {
             
             if (!ModelState.IsValid)
             {
-                return View("../Account/Comprobacion", login);
+                var comprobarRegistro= new RegisterViewModel { NombreUsuario = login.NombreUsuario,
+                    Contraseña = login.Contraseña };
+                return View("../Account/Comprobacion", comprobarRegistro);
             }
             
             ViewBag.Title = "Login page";
@@ -59,7 +71,7 @@ namespace TerraeApp.Controllers
                 };
 
                 var result = await _signInManager.PasswordSignInAsync(user, login.Contraseña, login.RememberMe, false);
-                var usuarioLogueado = HttpContext.User.Identity.Name;
+                
 
                 if (result.Succeeded)
                 {  

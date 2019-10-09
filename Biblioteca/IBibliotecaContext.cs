@@ -14,6 +14,7 @@ namespace Biblioteca
         DbSet<ExperienciaLaboral> ExperienciaLaborales { get; set; }
         DbSet<Oferta> Ofertas { get; set; }
 
+
         
     }
 }

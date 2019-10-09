@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ServiceModel;
 using Biblioteca.Modelo;
 
 namespace Biblioteca
 {
+    [ServiceContract]
     public interface IEmpresa
     {
        

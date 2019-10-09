@@ -1,10 +1,12 @@
 ﻿using Biblioteca.Modelo;
 using System;
 using System.Collections.Generic;
+using System.ServiceModel;
 using System.Text;
 
 namespace Biblioteca
 {
+    [ServiceContract]
     public interface IExperienciaLaboral
     {
         

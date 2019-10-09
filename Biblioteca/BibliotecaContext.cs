@@ -7,9 +7,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca
 {
-    public class BibliotecaContext: IdentityDbContext<AplicationUser>
+    public class BibliotecaContext: IdentityDbContext<AplicationUser>, IBibliotecaContext
     {
-        public BibliotecaContext(DbContextOptions<BibliotecaContext> options) : base(options)  { }
+        public BibliotecaContext(DbContextOptions<BibliotecaContext> options) : base(options)  
+        {
+          
+        
+        }
 
         
 
@@ -24,5 +28,7 @@ namespace Biblioteca
         public DbSet<Carnet> Carnets { get => carnets; set => carnets = value; }
         public DbSet<ExperienciaLaboral> ExperienciaLaborales { get => experienciaLaborales; set => experienciaLaborales = value; }
         public DbSet<Oferta> Ofertas { get => ofertas; set => ofertas = value; }
+        public DbSet<CodigoPath> CodigoPaths { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
+
 }
